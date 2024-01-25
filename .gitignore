@@ -3,3 +3,4 @@ config.json
 .devenv
 .direnv
 .pre-commit-config.yaml
+.env.production

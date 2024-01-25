@@ -7,9 +7,9 @@
   "author": "Abdo .AlGhoul",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -r tsconfig-paths/register src/index.ts",
-    "deploy": "ts-node -r tsconfig-paths/register src/index.ts",
-    "deploy-commands": "ts-node -r tsconfig-paths/register src/deploy-commands.ts"
+    "dev": "dotenv -e .env.development -e .env.production -- nodemon -r tsconfig-paths/register src/index.ts",
+    "deploy": "dotenv -e .env.production  -e .env.production -- ts-node -r tsconfig-paths/register src/index.ts",
+    "deploy-commands": "dotenv -e .env.development -e .env.production -- ts-node -r tsconfig-paths/register src/deploy-commands.ts"
   },
   "dependencies": {
     "@discordjs/opus": "^0.9.0",

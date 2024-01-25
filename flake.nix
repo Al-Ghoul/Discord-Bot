@@ -20,6 +20,11 @@
             packages = [
               nodejs
               yarn
+              nodePackages_latest.dotenv-cli
+              # For @discordjs/opus
+              python3
+              gnumake42
+              gcc
             ];
             pre-commit.hooks = {
               deadnix.enable = true;
